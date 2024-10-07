@@ -1,76 +1,148 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nail Designer</title>
+    <title>Guia Comercial - Valentim Gentil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Nail Designer</h1>
-        <p>Transforme suas unhas em obras de arte</p>
-        <a href="#contact" class="btn">Agende sua consulta</a>
-    </header>
 
-    <!-- Seção Sobre -->
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>Sou uma nail designer especializada em alongamento de unhas, nail art personalizada e muito mais. Cada unha é uma nova obra de arte!</p>
+<header>
+    <h1>Guia Comercial de Valentim Gentil</h1>
+    <p>Encontre os melhores comércios da cidade</p>
+    <input type="text" id="searchBar" placeholder="Buscar por nome ou categoria..." onkeyup="filterBusinesses()">
+</header>
+
+<div class="container">
+
+    <!-- Restaurantes -->
+    <section class="category" id="restaurantes">
+        <h2>Restaurantes</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://example.com" target="_blank">Restaurante Sabor do Vale</a></h3>
+                <p>Endereço: Rua das Flores, 123</p>
+                <p>Telefone: (17) 1234-5678</p>
+            </li>
+            <li>
+                <h3><a href="https://example.com" target="_blank">Churrascaria Boi na Brasa</a></h3>
+                <p>Endereço: Av. Central, 456</p>
+                <p>Telefone: (17) 8765-4321</p>
+            </li>
+        </ul>
     </section>
 
-    <!-- Seção Serviços -->
-    <section id="services">
-        <h2>Serviços</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <h3>Manicure & Pedicure</h3>
-                <p>Tratamentos completos para mãos e pés.</p>
-            </div>
-            <div class="service-item">
-                <h3>Alongamento de Unhas</h3>
-                <p>Unhas perfeitas com técnica de alongamento em gel.</p>
-            </div>
-            <div class="service-item">
-                <h3>Nail Art Personalizada</h3>
-                <p>Criação de designs exclusivos para suas unhas.</p>
-            </div>
-        </div>
+    <!-- Supermercados -->
+    <section class="category" id="supermercados">
+        <h2>Supermercados</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjM_7jS1fqIAxUoK7kGHcjyJJQQFnoECBgQAQ&url=https%3A%2F%2Fwww.instagram.com%2Fskinaovalentimgentil%2F%3Fhl%3Dpt-br&usg=AOvVaw08gwLLdKD6GyrBtZ-JZdLS&opi=89978449" target="_blank">Supermercado Skinão</a></h3>
+                <p>Endereço: Av. Horácio Gonçalves de Moraes 401</p>
+                <p>Telefone: (17) 9 9717-4762</p>
+            </li>
+            <li>
+                <h3><a href="https://www.facebook.com/p/Supermercado-Império-100066896924426/?_rdr" target="_blank">Supermercado Império</a></h3>
+                <p>Endereço: Rua Doutor Augusto Alves dos Reis, Valentim Gentil </p>
+                <p>Telefone: (17) 3485-1430</p>
+            </li>
+        </ul>
     </section>
 
-    <!-- Galeria -->
-    <section id="gallery">
-        <h2>Galeria</h2>
-        <div class="gallery-list">
-            <img src="images/unha1.jpg" alt="Exemplo de unha 1">
-            <img src="images/unha2.jpg" alt="Exemplo de unha 2">
-            <img src="images/unha3.jpg" alt="Exemplo de unha 3">
-        </div>
+    <!-- Açougue -->
+    <section class="category" id="acougue">
+        <h2>Açougue</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://example.com" target="_blank">Casa de Carne RJ</a></h3>
+                <p>Endereço:Rua Severino Bruzadim, 274 - Jd.Itália, Valentim Gentil</p>
+                <p>Telefone: (17) 99654-3256</p>
+            </li>
+        </ul>
     </section>
 
-    <!-- Depoimentos -->
-    <section id="testimonials">
-        <h2>Depoimentos</h2>
-        <p>"A melhor nail designer que já conheci! Minhas unhas ficaram incríveis!" – Cliente 1</p>
-        <p>"O design é único e personalizado, estou apaixonada!" – Cliente 2</p>
+    <!-- Farmácia -->
+    <section class="category" id="farmacia">
+        <h2>Farmácia</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://www.instagram.com/farmavidavg/" target="_blank">FarmaVida</a></h3>
+                <p>Endereço: Av. Cavalin, 779 - Loja 1, Valentim Gentil </p>
+                <p>Telefone: 17 3485-1965/ 17 99707-1299</p>
+            </li>
+        </ul>
     </section>
 
-    <!-- Contato -->
-    <section id="contact">
-        <h2>Contato</h2>
-        <form>
-            <input type="text" id="name" placeholder="Seu nome" required>
-            <input type="email" id="email" placeholder="Seu email" required>
-            <textarea id="message" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+    <!-- Hortifrúti -->
+    <section class="category" id="hortifruti">
+        <h2>Hortifrúti</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://example.com" target="_blank">Hortifrúti Verde Vida</a></h3>
+                <p>Endereço: Rua das Plantas, 200</p>
+                <p>Telefone: (17) 5555-4444</p>
+            </li>
+        </ul>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Nail Designer - Todos os direitos reservados</p>
-    </footer>
+    <!-- Barbearia -->
+    <section class="category" id="barbearia">
+        <h2>Barbearia</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://example.com" target="_blank">Barbearia Corte Fino</a></h3>
+                <p>Endereço: Rua dos Cabeleireiros, 111</p>
+                <p>Telefone: (17) 3333-2222</p>
+            </li>
+        </ul>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Padarias -->
+    <section class="category" id="padarias">
+        <h2>Padarias</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://cardapio.menu/restaurants/valentim-gentil/padaria-santo-antonio-36" target="_blank">Padaria Santo Antônio</a></h3>
+                <p>Endereço: Rua Gustavo Pantaleao De Lima 5, Valentim Gentil</p>
+                <p>Telefone:(17)34851153</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Lanchonetes -->
+    <section class="category" id="lanchonetes">
+        <h2>Lanchonetes</h2>
+        <ul class="business-list">
+            <li>
+                <h3><a href="https://example.com" target="_blank">Lanchonete Fast Snack</a></h3>
+                <p>Endereço: Rua do Lanche, 789</p>
+                <p>Telefone: (17) 2222-1111</p>
+            </li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    <p>Guia Comercial de Valentim Gentil &copy; 2024</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>

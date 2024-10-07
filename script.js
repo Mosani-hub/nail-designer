@@ -1,7 +1,27 @@
-// Simples interação de feedback ao enviar formulário
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Previne o envio real
-    const name = document.getElementById("name").value;
-    alert(`Obrigado por sua mensagem, ${name}! Entraremos em contato em breve.`);
-    document.querySelector("form").reset(); // Reseta o formulário
-});
+function filterBusinesses() {
+    let input = document.getElementById('searchBar').value.toLowerCase();
+    let categories = document.getElementsByClassName('category');
+
+    for (let i = 0; i < categories.length; i++) {
+        let category = categories[i];
+        let businesses = category.getElementsByClassName('business-list')[0].getElementsByTagName('li');
+        
+        let categoryFound = false;
+
+        for (let j = 0; j < businesses.length; j++) {
+            let businessName = businesses[j].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            if (businessName.includes(input)) {
+                businesses[j].classList.remove('hidden');
+                categoryFound = true;
+            } else {
+                businesses[j].classList.add('hidden');
+            }
+        }
+
+        if (!categoryFound) {
+            category.style.display = 'none';
+        } else {
+            category.style.display = 'block';
+        }
+    }
+}
